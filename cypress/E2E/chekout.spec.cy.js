@@ -11,23 +11,15 @@ describe('Fluxo de compra', () => {
         cy.get('.containerPassword > .undefined').type('Teste@reserva123')
         cy.get('.sendButton').click()
         cy.get(':nth-child(2) > .rsv__header__nav__list__item').click()
-        cy.contains('Blusas').click()
-        cy.wait(20000)
-        cy.contains('Blusa Tricot Estrelas').click({waitForAnimations: false})
-        cy.wait(20000)
-        cy.contains('ADICIONAR À SACOLA').click({force: true})
+        cy.get('a[href="/colecao-reversa/feminino-camisas"]').click()
+        cy.wait(30000)
+        cy.contains('Camisa Sarja Cropped Color').click({waitForAnimations: false})
+        cy.wait(30000)
+        cy.get('.lojausereserva-add-to-cart-button-0-x-buttonText').click({ force: true }); 
         cy.wait(6000)
         cy.get('.lojausereserva-minicart-2-x-openIconContainer').click()
-        cy.wait(9000)
+        cy.wait(10000)
         cy.get(".minicart-footer__checkout-btn").click()
-        /*
-        cy.get('#client-first-name').type('Teste')
-        cy.get('#client-last-name').type('ana')
-        cy.get('#client-document').type('51957527536')
-        cy.get('#client-phone').type('8499408-2859')
-        cy.get('#client-birthday').type('06041995')
-        cy.get('#go-to-shipping').click()
-        */
         cy.get('#payment-group-creditCardPaymentGroup > .payment-group-item-text').click({force: true})
       
     });
