@@ -13,7 +13,7 @@ describe('Fluxo de compra', () => {
         cy.get(':nth-child(2) > .rsv__header__nav__list__item').click() //criando na categoria feminina
         cy.get('a[href="/colecao-reversa/feminino-camisas"]').click() // entrando na coleção camisas
         cy.wait(30000)
-        cy.contains('Camisa Sarja Cropped Color').click({waitForAnimations: false}) // clicando em um item
+        cy.get('a[href="/camisa-paisley-estrelas0083121/p?skuId=533092"]').click({waitForAnimations: false}) // clicando em um item
         cy.wait(30000) 
         cy.get('.lojausereserva-add-to-cart-button-0-x-buttonText').click({ force: true }); // clicando no botão para adicionar ao carrinho
         cy.wait(6000)
