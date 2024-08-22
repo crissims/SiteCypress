@@ -11,7 +11,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "cypress": "^13.13.1"
+    "cypress": "^13.13.1",
+    "site-reserva": "file:"
   },
   "devDependencies": {
     "@faker-js/faker": "^8.4.1"
