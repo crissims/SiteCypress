@@ -15,7 +15,7 @@ describe('Fluxo de compra', () => {
         cy.wait(30000)
         cy.get('a[href="/camisa-paisley-estrelas0083121/p?skuId=533092"]').click({waitForAnimations: false}) // clicando em um item
         cy.wait(30000) 
-        cy.get('.lojausereserva-add-to-cart-button-0-x-buttonText').click({ force: true }); // clicando no botão para adicionar ao carrinho
+        cy.contains('ADICIONAR À SACOLA').click({ force: true }); // clicando no botão para adicionar ao carrinho
         cy.wait(6000)
         cy.get('.lojausereserva-minicart-2-x-openIconContainer').click() // clicando em finalizar a compra
         cy.wait(10000)
